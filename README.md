@@ -1,27 +1,31 @@
-# DashboardKit Free React Admin Dashboard Template
+# 🌐 EduPaham
 
-#### Preview
+_EduPaham_ adalah website edukasi interaktif berbasis **HTML**, **SCSS**, dan **JavaScript** yang dibuat untuk membantu pemula memahami dasar-dasar HTML dengan pendekatan per bab dan navigasi yang terstruktur.
 
- - [Demo](https://themewagon.github.io//)
+Project ini awalnya dikembangkan sebagai tugas kolaborasi, lalu dimodifikasi dan disempurnakan oleh **Dastanzzzzz** untuk kebutuhan pembelajaran yang lebih optimal.
 
-#### Download
- - [Download from ThemeWagon]( https://themewagon.com/themes/)
- 
- 
-## Getting Started
+---
 
-Clone from Github 
-```
-https://github.com/themewagon/Gradient-Able-free-bootstrap-admin-template.git
-```
-## Run Local Server
-```
-npm run start
-```
+## 📚 Fitur Utama
 
-## Author
+- ✅ Materi HTML interaktif dan terpisah per topik
+- ✅ Navigasi antar halaman yang intuitif
+- ✅ SCSS modular untuk pengelolaan style yang rapi
+- ✅ Desain responsif yang cocok untuk berbagai ukuran layar
+- ✅ Struktur file rapi dan scalable
 
-Design and code is completely written by CodedThemes's design and development team.  
+---
+
+## 🚀 Cara Menjalankan Project
+
+Pastikan kamu sudah menginstall [Yarn](https://classic.yarnpkg.com/en/docs/install) terlebih dahulu.
+
+```bash
+# Install semua dependensi
+yarn install
+
+# Jalankan server lokal
+yarn start
 
 
 ## License
