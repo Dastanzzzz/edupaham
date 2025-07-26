@@ -11,13 +11,11 @@ import code from '../../assets/images/code.png';
 
 export default function About() {
   const handleMouseEnter = (e) => {
-    // Tambahkan transform dan box-shadow untuk efek timbul
     e.currentTarget.style.transform = 'translateY(-5px)';
     e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.2)';
   };
 
   const handleMouseLeave = (e) => {
-    // Reset transform dan box-shadow saat hover selesai
     e.currentTarget.style.transform = 'translateY(0)';
     e.currentTarget.style.boxShadow = 'none';
   };
@@ -42,8 +40,7 @@ export default function About() {
                   Pernah merasa belajar programming itu rumit, penuh istilah asing, dan bingung harus mulai dari mana? Kamu tidak sendirian.
                 </p>
                 <p>
-                  Itulah alasan <strong>EduPaham</strong> hadir — platform belajar koding online berbahasa Indonesia yang dirancang dengan
-                  satu filosofi utama: <em>membuatmu benar-benar paham</em>.
+                  Itulah alasan <strong>EduPaham</strong> hadir — platform belajar koding online berbahasa Indonesia yang dirancang dengan satu filosofi utama: <em>membuatmu benar-benar paham</em>.
                 </p>
                 <p>
                   Karena <strong>koding bukan sekadar hafalan sintaks</strong>, tapi tentang memahami konsep dan logika di baliknya.
@@ -72,7 +69,6 @@ export default function About() {
 
           <div className="container">
             <div className="row g-4">
-              {/* VISI */}
               <div className="col-md-6">
                 <div className="p-4 border rounded shadow-sm h-100 bg-light">
                   <div className="d-flex align-items-start mb-3">
@@ -80,13 +76,11 @@ export default function About() {
                     <h5 className="mb-0 text-primary">Visi</h5>
                   </div>
                   <p className="mb-0">
-                    Menjadi platform belajar koding berbahasa Indonesia yang paling mudah dipahami dan membumi, menjangkau siapa saja yang
-                    ingin masuk ke dunia teknologi.
+                    Menjadi platform belajar koding berbahasa Indonesia yang paling mudah dipahami dan membumi, menjangkau siapa saja yang ingin masuk ke dunia teknologi.
                   </p>
                 </div>
               </div>
 
-              {/* MISI */}
               <div className="col-md-6" id="misiCard">
                 <div className="p-4 border rounded shadow-sm h-100 bg-light">
                   <div className="d-flex align-items-start mb-3">
@@ -107,79 +101,69 @@ export default function About() {
           <h2 className="my-md-5 text-center">Ada Apa Aja Sih Disini?</h2>
           <div className="container py-3">
             <div className="row row-cols-1 row-cols-md-2 g-4">
-              <div
-                className="col"
-                style={{ transition: 'transform 0.3s, box-shadow 0.3s' }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <div className="d-flex">
-                  <div className="me-3">
-                    <i className="bi bi-diagram-3 fs-1 text-primary toggle-icon" data-target="desc-1" style={{ cursor: 'pointer' }}></i>
-                  </div>
-                  <div>
-                    <h5>Alur Belajar Terstruktur</h5>
-                    <p id="desc-1" className="desc">
-                      Kurikulum yang dirancang dari nol hingga siap kerja, membimbingmu langkah demi langkah.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col"
-                style={{ transition: 'transform 0.3s, box-shadow 0.3s' }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <div className="d-flex">
-                  <div className="me-3">
-                    <i className="bi bi-lightbulb fs-1 text-warning toggle-icon" data-target="desc-2" style={{ cursor: 'pointer' }}></i>
-                  </div>
-                  <div>
-                    <h5>Penjelasan Intuitif</h5>
-                    <p id="desc-2" className="desc">
-                      Menggunakan analogi dunia nyata dan studi kasus sederhana agar konsep rumit terasa lebih mudah.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col"
-                style={{ transition: 'transform 0.3s, box-shadow 0.3s' }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <div className="d-flex">
-                  <div className="me-3">
-                    <i className="bi bi-bricks fs-1 text-success toggle-icon" data-target="desc-3" style={{ cursor: 'pointer' }}></i>
-                  </div>
-                  <div>
-                    <h5>Fokus pada Fondasi</h5>
-                    <p id="desc-3" className="desc">
-                      Kami memastikan kamu kuat di dasar-dasarnya, karena fondasi kokoh adalah kunci teknologi masa depan.
-                    </p>
+              {[
+                {
+                  icon: 'bi-diagram-3 text-primary',
+                  title: 'Alur Belajar Terstruktur',
+                  desc: 'Kurikulum yang dirancang dari nol hingga siap kerja, membimbingmu langkah demi langkah.',
+                },
+                {
+                  icon: 'bi-lightbulb text-warning',
+                  title: 'Penjelasan Intuitif',
+                  desc: 'Menggunakan analogi dunia nyata dan studi kasus sederhana agar konsep rumit terasa lebih mudah.',
+                },
+                {
+                  icon: 'bi-bricks text-success',
+                  title: 'Fokus pada Fondasi',
+                  desc: 'Kami memastikan kamu kuat di dasar-dasarnya, karena fondasi kokoh adalah kunci teknologi masa depan.',
+                },
+                {
+                  icon: 'bi-gift text-danger',
+                  title: 'Materi Gratis dan Berkualitas',
+                  desc: 'Semua materi bisa diakses gratis, karena pendidikan berkualitas harus bisa dijangkau semua orang.',
+                },
+              ].map((item, index) => (
+                <div
+                  className="col"
+                  key={index}
+                  style={{ transition: 'transform 0.3s, box-shadow 0.3s' }}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="d-flex">
+                    <div className="me-3">
+                      <i className={`bi fs-1 ${item.icon}`} data-target={`desc-${index}`} style={{ cursor: 'pointer' }}></i>
+                    </div>
+                    <div>
+                      <h5>{item.title}</h5>
+                      <p id={`desc-${index}`} className="desc">{item.desc}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
 
-              <div
-                className="col"
-                style={{ transition: 'transform 0.3s, box-shadow 0.3s' }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <div className="d-flex">
-                  <div className="me-3">
-                    <i className="bi bi-gift fs-1 text-danger toggle-icon" data-target="desc-4" style={{ cursor: 'pointer' }}></i>
-                  </div>
-                  <div>
-                    <h5>Materi Gratis dan Berkualitas</h5>
-                    <p id="desc-4" className="desc">
-                      Semua materi bisa diakses gratis, karena pendidikan berkualitas harus bisa dijangkau semua orang.
-                    </p>
-                  </div>
+          {/* ===== Tentang Tim dari UNSIA ===== */}
+          <h2 className="text-center my-5">Tentang Tim Pengembang</h2>
+          <div className="container">
+            <div className="text-center mb-3">
+              <p className="lead">
+                EduPaham dibangun oleh 5 mahasiswa dari <strong>Universitas Siber Asia (UNSIA)</strong> sebagai proyek kolaboratif untuk menghadirkan pembelajaran pemrograman yang mudah dimengerti dan relevan bagi siapa saja.
+              </p>
+            </div>
+
+            <div className="row justify-content-center">
+              <div className="col-md-10">
+                <div className="border rounded p-4 bg-light shadow-sm">
+                  <h5 className="mb-3 text-primary fw-bold">Anggota Tim:</h5>
+                  <ol className="ps-3 mb-0">
+                    <li><strong>Berliana Setyani</strong> – Developer Coding Website EduPaham</li>
+                    <li><strong>Destantyo Nuruliansyah Ramadhan</strong> – Developer Coding Website EduPaham</li>
+                    <li><strong>Muhammad Khazza Hafizha</strong> – Content Researcher</li>
+                    <li><strong>Sattari Radjasyah Hidayat</strong> – Content Researcher</li>
+                    <li><strong>Krisna Naufal Azhar Suhendar </strong> – Presentation Designer</li>
+                  </ol>
                 </div>
               </div>
             </div>
@@ -187,14 +171,18 @@ export default function About() {
 
           <h2 className="my-5 text-center">Gabung Komunitas EduPaham</h2>
           <p className="container text-center">
-            EduPaham bukan hanya tempat belajar, tapi juga tempat tumbuh bareng. Gabung komunitas kami di Discord, ikut diskusi, atau bahkan
-            kontribusi materi baru!
+            EduPaham bukan hanya tempat belajar, tapi juga tempat tumbuh bareng. Gabung komunitas kami di Discord, ikut diskusi, atau bahkan kontribusi materi baru!
           </p>
           <div className="text-center">
             <a href="https://discord.gg/EmYy7cMA" className="btn btn-primary">
               Join Discord
             </a>
           </div>
+
+          {/* ===== Footer Watermark ===== */}
+          <footer className="text-center text-muted mt-5 mb-3 small">
+            Dibuat dengan ❤️ oleh Tim Mahasiswa UNSIA – EduPaham Project © 2025
+          </footer>
         </MainCard>
       </Col>
     </Row>
